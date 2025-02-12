@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --secondaryBlack: #1e1e1e;
+  --lightGray: #c9c9c9;
+  --offWhite: #f6f6f6;
+  --offWhite2: #f2f2f2;
+  --yellow: #faca10;
+  --gray: #a5a5a5;
+  --nunito: "Nunito", serif;
+  --lora: "Lora", serif;
+}
+@theme {
+  --color-secondaryBlack: var(--secondaryBlack);
+  --color-lightGray: var(--lightGray);
+  --color-offWhite: var(--offWhite);
+  --color-offWhite2: var(--offWhite2);
+  --color-gray: var(--gray);
+  --color-yellow: var(--yellow);
+  --font-nunito: var(--nunito);
+  --font-lora: var(--lora);
+}
+.slick-dots {
+  bottom: -50px !important;
+  display: flex !important;
+  gap: 10px !important;
+  align-items: center;
+  justify-content: center;
+}
+.slick-dots li button:before {
+  font-size: 16px !important;
+  color: var(--yellow) !important;
+}
+.cardShadow {
+  box-shadow: 1px 1px 1px 2px #facb1035;
+}
+/* .fancyStyle {
+  @apply relative !z-100;
+} */
+.dotStyle::after {
+  position: absolute;
+  content: "";
+  left: -10px;
+  top: -9px;
+  background-color: #faca10;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: -10;
+}
+.normalStyle {
+  @apply z-10 relative py-[10px] px-5 w-fit text-nowrap rounded-[5px] text-[18px] font-bold font-nunito text-white bg-yellow hover:bg-black duration-300 transition-all cursor-pointer;
+}
+.dotStyle {
+  @apply z-100 relative py-[10px] px-5 w-fit text-nowrap rounded-[5px] text-[18px] font-bold font-nunito text-white bg-black hover:bg-yellow duration-300 transition-all cursor-pointer;
+}
+.dotStyle::before {
+  position: absolute;
+  content: "";
+  right: -10px;
+  bottom: -9px;
+  background-color: #faca10;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: -10;
+}
